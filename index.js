@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 const port = 5000;
 // const password = 'PHZepBzP62WgcnW';
 // console.log(process.env.DB_USER);
-const uri = `mongodb+srv://volunteerNetworkDB:PHZepBzP62WgcnW@cluster0.nx6j2.mongodb.net/vNetworkdb?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://volunteerNetworkDB:${process.env.DB_PASS}@cluster0.nx6j2.mongodb.net/${process.env.DB_USER}?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 // const uri = "mongodb+srv://volunteerNetworkDB:<password>@cluster0.nx6j2.mongodb.net/<dbname>?retryWrites=true&w=majority";
 
